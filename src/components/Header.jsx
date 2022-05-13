@@ -1,9 +1,10 @@
+import logo from '../assets/img/pizza-logo.svg'
 function Header(){
   return (
     <div class="header">
     <div class="container">
       <div class="header__logo">
-        <img width="38" src="./img/pizza-logo.svg" alt="Pizza logo" />
+        <img width="38" src={logo} alt="Pizza logo" />
         <div>
           <h1>Pizza</h1>
         </div>
