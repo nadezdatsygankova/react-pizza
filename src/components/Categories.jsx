@@ -16,10 +16,11 @@ function Categories() {
     setActiveIndex(index);
   };
   return (
-    <div class="categories">
+    <div className="categories">
       <ul>
         {categories.map((value, index) => (
           <li
+          key ={value}
             onClick={() => onClickCategories(index)}
             className={activeIndex === index ? 'active' : ''}>
             {value}

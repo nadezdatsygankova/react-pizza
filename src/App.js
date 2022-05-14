@@ -11,23 +11,19 @@ import pizzas from './assets/pizza.json';
 function App() {
   return (
     <div className="App">
-      <div class="wrapper">
+      <div className="wrapper">
         <Header />
-        <div class="content">
-          <div class="container">
-            <div class="content__top">
+        <div className="content">
+          <div className="container">
+            <div className="content__top">
               <Categories />
               <Sort />
             </div>
-            <h2 class="content__title">All Pizzas</h2>
-            <div class="content__items">
+            <h2 className="content__title">All Pizzas</h2>
+            <div className="content__items">
               {
               pizzas.map((obj) => (
-                <PizzaBlock title={obj.title}
-                price={obj.price}
-                imageUrl={obj.imageUrl}
-                types ={obj.types}
-                sizes ={obj.sizes}
+                <PizzaBlock key={obj.id} {...obj}
                  />
               ))
               }

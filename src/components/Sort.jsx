@@ -1,7 +1,7 @@
 function Sort() {
   return (
-    <div class="sort">
-      <div class="sort__label">
+    <div className="sort">
+      <div className="sort__label">
         <svg
           width="10"
           height="6"
@@ -16,9 +16,9 @@ function Sort() {
         <b>Sort by:</b>
         <span>Featured</span>
       </div>
-      <div class="sort__popup">
+      <div className="sort__popup">
         <ul>
-          <li class="active">Featured</li>
+          <li className="active">Featured</li>
           <li>Lowest Price</li>
           <li>Highest Price</li>
         </ul>
