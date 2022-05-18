@@ -1,8 +1,6 @@
 import React from 'react';
 
-
 function PizzaBlock({ title, price, imageUrl, types, sizes }) {
-
   const [typePizza, setTypePizza] = React.useState();
   const [sizePizza, setSizePizza] = React.useState();
   return (
@@ -12,12 +10,22 @@ function PizzaBlock({ title, price, imageUrl, types, sizes }) {
       <div className="pizza-block__selector">
         <ul>
           {types.map((type, index) => (
-            <li key = {type} onClick ={() => setTypePizza(index)} className={typePizza === index ? 'active' : ''}>{type}</li>
+            <li
+              key={type}
+              onClick={() => setTypePizza(index)}
+              className={typePizza === index ? 'active' : ''}>
+              {type}
+            </li>
           ))}
         </ul>
         <ul>
           {sizes.map((size, index) => (
-            <li key={size} onClick ={() => setSizePizza(index)} className={sizePizza === index ? 'active' : ''}>{size}</li>
+            <li
+              key={size}
+              onClick={() => setSizePizza(index)}
+              className={sizePizza === index ? 'active' : ''}>
+              {size}
+            </li>
           ))}
         </ul>
       </div>
