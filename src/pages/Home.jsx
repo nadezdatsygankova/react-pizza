@@ -9,9 +9,13 @@ function Home() {
   const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {
-    fetch('https://6283053292a6a5e4621cb912.mockapi.io/items').then((res) =>
-      res.json().then((data) => setItems(data), setIsLoading(false)),
-    );
+    fetch('https://6283053292a6a5e4621cb912.mockapi.io/items')
+    .then((res) =>res.json())
+    .then((data) => {
+      setItems(data);
+      setIsLoading(false);
+    });
+  window.scrollTo(0,0);
   }, []);
   return (
     <>

@@ -4,7 +4,8 @@ function PizzaBlock({ title, price, imageUrl, types, sizes }) {
   const [typePizza, setTypePizza] = React.useState();
   const [sizePizza, setSizePizza] = React.useState();
   return (
-    <div className="pizza-block">
+    <div className='pizza-block-wrapper'>
+      <div className="pizza-block">
       <img className="pizza-block__image" src={imageUrl} alt="Pizza" />
       <h4 className="pizza-block__title">{title}</h4>
       <div className="pizza-block__selector">
@@ -47,6 +48,7 @@ function PizzaBlock({ title, price, imageUrl, types, sizes }) {
           <i>0</i>
         </button>
       </div>
+    </div>
     </div>
   );
 }
